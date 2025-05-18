@@ -1,0 +1,419 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: clamp(16px, 1.5vw, 30px);
+    line-height: 20px;
+    width: 100vw;
+    height: 600vh;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("background-mobile.jpg");
+    background-size: 100% 100%;
+    background-attachment: scroll;
+}
+
+#Profile-photo-menu {
+    display: none;
+}
+
+#menu-bar {
+    grid-row-gap: 3vh;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+}
+
+
+#menu-navbar {
+    display: none;
+    flex-direction: column;
+    gap: 1.5vh;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 27vh;
+}
+
+#menu-toggle {
+    font-size: 9vh;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    margin-bottom: 4vh;
+}
+
+#menu-navbar a {
+    display: flex;
+    width: 50%;
+    height: 3vh;
+    border: 1px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: clamp(16px, 1.5vw, 30px);
+    color: #333;
+    text-decoration: none;
+}
+
+#menu-navbar a:hover {
+    display: flex;
+    width: 100%;
+    height: 3vh;
+    border: 1px;
+    background-color: #333;
+    color: #e2deda;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+#menu-navbar.active {
+    display: flex;
+    width: 20%;
+    height: 27vh;
+    border: 1px;
+    color: #e2deda;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 6px;
+    position: absolute;
+    top: 10vh;
+    right: 2vw;
+}
+
+#menu-logos {
+    gap: 1.5vw;
+    margin-left: 2vw;
+    flex-flow: row;
+    display: flex;
+    height: 60%;
+}
+
+
+.logos {
+    height: 100%;
+}
+
+#Profile-photo {
+    position: relative;
+    height: 30%;
+    display: block;
+}
+
+#central-block {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    display: flex;
+
+    text-align: justify;
+}
+
+#paragraph {
+    width: 100%;
+}
+
+
+
+#experience {
+    background-image: url("background-mobile2.png");
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    border-radius: 0;
+}
+
+#experience li {
+    text-align: justify;
+}
+
+.main-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+}
+
+#no-bullets {
+    list-style: none;
+}
+
+#publications li {
+    text-align: justify
+}
+
+#text {
+    width: 75%;
+    text-align: justify;
+}
+
+
+#contact-block {
+    width: 50%;
+}
+
+
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3 vh;
+}
+
+input,
+textarea {
+    width: 100%;
+    height: 50%;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+
+    body {
+        color: #333;
+        background-color: #e2deda;
+        font-family: Arial, sans-serif;
+        font-size: clamp(16px, 1.5vw, 30px);
+        line-height: 20px;
+        width: 100vw;
+        height: 600vh;
+    }
+
+
+    #home {
+        background-image: url("background2.png");
+        background-position: 0 0;
+        background-size: 100% 100%;
+        background-attachment: scroll;
+        border-radius: 0;
+
+    }
+
+    #Profile-photo-menu {
+        position: relative;
+        inset: 0% 0% auto;
+        width: 70%;
+        max-width: 200px;
+        display: block;
+    }
+
+    #menu-bar {
+        grid-row-gap: 3vh;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        inset: 0% 0% 0% auto;
+        background-color: transparent;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+
+
+    #menu-navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: static;
+
+    }
+
+    #menu-navbar a {
+        display: flex;
+        width: 50%;
+        height: 3vh;
+        border: 1px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: 6px;
+        font-family: Arial, sans-serif;
+        font-size: clamp(16px, 1.5vw, 30px);
+        color: #333;
+        text-decoration: none;
+    }
+
+    #menu-navbar a:hover {
+        display: flex;
+        width: 50%;
+        height: 3vh;
+        border: 1px;
+        background-color: #333;
+        color: #e2deda;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: 6px;
+    }
+
+    #menu-navbar a.active {
+        display: flex;
+        width: 50%;
+        height: 3vh;
+        border: 1px;
+        background-color: #333;
+        color: #e2deda;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: 6px;
+    }
+
+    #menu-navbar.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: static;
+    }
+
+    #menu-logos {
+        grid-row-gap: 1.5vh;
+        flex-flow: column;
+        display: flex;
+        width: 25%;
+        height: auto;
+    }
+
+    .logos {
+        width: 100%;
+    }
+
+    #Profile-photo {
+        display: none;
+    }
+
+    #central-block {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        display: flex;
+        position: relative;
+        top: 65%;
+        left: 35%;
+        text-align: justify;
+    }
+
+    #paragraph {
+        width: 100%;
+    }
+
+    #experience {
+        background-image: none;
+    }
+
+    #experience li {
+        text-align: justify
+    }
+
+    .main-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        height: 100%;
+    }
+
+    #no-bullets {
+        list-style: none;
+    }
+
+    #publications li {
+        text-align: justify
+    }
+
+    #text {
+        width: 75%;
+        text-align: justify;
+    }
+
+
+    #contact-block {
+        width: 50%;
+    }
+
+
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3 vh;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        height: 50%;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+}
